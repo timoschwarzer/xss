@@ -28,7 +28,8 @@ document.body.appendChild(grid)
 
 for (let i = 0; i < 16; i++) {
   const iframe = document.createElement('iframe')
-  iframe.allow = 'autoplay'
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+  iframe.allowfullscreen = true
   iframe.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1'
   grid.appendChild(iframe)
 }
