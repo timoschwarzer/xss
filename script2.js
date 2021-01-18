@@ -62,3 +62,12 @@ injectStyle(`
     bottom: 0;
   }
 `)
+
+const dot = document.createElement('div')
+dot.classList.add('dot')
+document.body.appendChild(dot)
+
+const hand = document.createElement('img')
+hand.classList.add('dot')
+hand.src = imageData
+document.body.appendChild(hand)
