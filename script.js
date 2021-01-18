@@ -18,6 +18,7 @@ injectStyle(`
   .rickgrid iframe {
     width: 100%;
     height: 100%;
+    border: 0;
   }
 `)
 
@@ -27,7 +28,7 @@ document.body.appendChild(grid)
 
 for (let i = 0; i < 16; i++) {
   const iframe = document.createElement('iframe')
-  iframe.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1'
   iframe.allow = 'autoplay'
+  iframe.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1'
   grid.appendChild(iframe)
 }
