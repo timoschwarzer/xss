@@ -8,10 +8,16 @@ injectStyle(`
   .rickgrid {
     display: grid;
     position: fixed;
-    grid-template-columns: 4;
-    grid-template-rows: 4;
-    align-items: stretch;
-    justify-content: stretch;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .rickgrid iframe {
+    width: 100%;
+    height: 100%;
   }
 `)
 
@@ -22,5 +28,6 @@ document.body.appendChild(grid)
 for (let i = 0; i < 16; i++) {
   const iframe = document.createElement('iframe')
   iframe.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1'
+  iframe.allow = 'autoplay'
   grid.appendChild(iframe)
 }
