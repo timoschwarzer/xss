@@ -64,17 +64,17 @@ injectStyle(`
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateY(-50%);
-    animation: dot 4000ms 1000ms ease-in forwards;
+    animation: dot 5000ms 1000ms ease-in forwards;
   }
   
   .hand {
-    display: fixed;
+    position: fixed;
     opacity: 0;
     left: 0;
     bottom: 0;
     width: 200px;
     height: auto;
-    animation: dot 4000ms 1000ms ease-in forwards;
+    animation: hand 5000ms 1000ms ease-in forwards;
   }
 `)
 
