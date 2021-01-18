@@ -42,6 +42,18 @@ injectStyle(`
     }
   }
 
+  @keyframes hand {
+    0% {
+      opacity: 0;
+    }
+    99% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   .dot {
     position: fixed;
     width: 32px;
@@ -52,7 +64,7 @@ injectStyle(`
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateY(-50%);
-    animation: dot 4000ms 1000ms ease-in;
+    animation: dot 4000ms 1000ms ease-in forwards;
   }
   
   .hand {
@@ -60,6 +72,9 @@ injectStyle(`
     opacity: 0;
     left: 0;
     bottom: 0;
+    width: 200px;
+    height: auto;
+    animation: dot 4000ms 1000ms ease-in forwards;
   }
 `)
 
@@ -68,6 +83,6 @@ dot.classList.add('dot')
 document.body.appendChild(dot)
 
 const hand = document.createElement('img')
-hand.classList.add('dot')
+hand.classList.add('hand')
 hand.src = imageData
 document.body.appendChild(hand)
